@@ -36,7 +36,7 @@ function Mobile() {
                 </div>
             </div>
             <ExpandedNavbar className={menuClass} />
-            <div className='absolute top-[10px] right-[10px] pt-[10px] pr-[60px]'>
+            <div className='absolute top-[10px] right-[10px] pt-[10px] pr-[30px]'>
                 <HamburgerMenu className={hamburgerClass} onClick={toggleMenu} />
             </div>
 
