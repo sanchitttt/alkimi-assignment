@@ -25,7 +25,7 @@ function FourthSection() {
                 <SectionHeading>
                     Lorem ipsum dolor
                 </SectionHeading>
-                <div className='flex flex-col mt-[30px] desktop:gap-[40px] mobile:gap-[75px]'>
+                <div className='flex flex-col mt-[30px] desktop:gap-[40px] '>
                     {mockData.map((item, idx) => {
                         return <Accordian key={idx} heading='Lorem ipsum' selectedTab={selectedTab} setSelectedTab={setSelectedTab} idx={idx}>
                             {item.description}
