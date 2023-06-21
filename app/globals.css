@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+body {
+    color: white;
+    background-color: black;
+}
+
+.visible {
+    /* display: inherit; */
+    transition: display inherit ease-in 0.5s;
+}
+
+.hidden {
+    /* display: none; */
+    transition: display none ease-out 0.5s;
+}
+
+/* ---Animations---*/
+.burger-bar {
+    transition: ease-out 0.45s;
+}
+
+
+.burger-bar.clicked:nth-child(1) {
+    transform: rotate(45deg);
+    transition: ease-out 0.45s;
+}
+
+.burger-bar.clicked:nth-child(2) {
+    transform: rotate(319deg) translate(7px, -10px);
+    transition: ease-out 0.5s;
+}
+
+.burger-bar.unclicked {
+    transform: translate(0px, -10px)
+}
+
+.burger-bar.unclicked:nth-child(1) {
+    transform: rotate(180deg);
+    transition: ease-out 0.5s;
+    ;
+}
+
+.burger-bar.unclicked:nth-child(2) {
+    transform: rotate(180deg) translate(0);
+    transition: ease-out 0.5s;
+    ;
+}
+
+.div1 {
+    grid-area: 1 / 1 / 2 / 4;
+}
+
+.div2 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.div3 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.div4 {
+    grid-area: 2 / 3 / 4 / 4;
+}
+
+.div5 {
+    grid-area: 4 / 3 / 5 / 4;
+}
+
+.div6 {
+    grid-area: 5 / 1 / 6 / 2;
+}
+
+.div7 {
+    grid-area: 5 / 2 / 6 / 3;
+}
+
+.div8 {
+    grid-area: 6 / 2 / 8 / 3;
+}
+
+.div9 {
+    grid-area: 6 / 3 / 7 / 4;
+}
+
+
+.thirdSection-div1 {
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+.thirdSection-div2 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.thirdSection-div3 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.thirdSection-div4 {
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+.thirdSection-div5 {
+    grid-area: 3 / 3 / 4 / 4;
+}
+
+.thirdSection-div6 {
+    grid-area: 4 / 1 / 5 / 4;
+}
+
+
+.nonHovered {
+    clip-path: circle(19.7% at 25% 50%);
+    transition-property: clip-path;
+    transition-duration: 10s;
+    transition-timing-function: ease-in-out;
+}
+
+
+.about-us-bg {
+    transition: 0.5s;
+    transition-duration: clip-path 2s;
+    transition: clip-path 0.5s ease-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1000;
+}
+
+.hovered {
+    clip-path: none;
+    transition-property: clip-path;
+    transition-duration: 10s;
+    transition-timing-function: ease-in-out;
+}
+
+.marquee-effect {
+    animation: move-right 5s linear infinite;
+    font-weight: bold;
+}
+
+
+.divider-container {
+    background: url("https://s3-alpha-sig.figma.com/img/a7d2/5388/73667319c05abc64d79b3edf20660ead?Expires=1688342400&Signature=Vp~iKoI0UMulVmCLVCneQVe~~gLqASbp51lwyN13--k9Cwj9ulRb~63vS9-l1to0cRbre~Olwgpfcb6XLYHIuD5WwX8YRVR1i~WT7rR2nqRrDt~tPRH6K8Jv~6hFPtjNhkuSRQNupNnNn1nQxNNRT47jx0lgPiP9TungLNBtKNMcLBdA04C-tIVfmWvjly9hIoUWzpcSwGnqTSlLB1WdJhbTOQq3Pu3RDFzufeEtyqDU-kVrIUM8z6k6PmCTF4cGhDZCjU4Kzj0L7dZfU9D4VFGpdlH4fcRC1DuEnyrVsMd8oAMq7FQC1FPC6eoIlNK~am3TYBCZri4zP~PtgzIoMQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+    mask-image: linear-gradient(to right, hsl(0 0% 0% / 0), hsl(0 0% 0% /1) 10%, hsl(0 0% 0% /1) 90%, hsl(0 0% 0% / 0));
+    background-size: cover;
+    background-position: bottom;
+}
+
+
+@keyframes move-right {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(100%));
+    }
+}
